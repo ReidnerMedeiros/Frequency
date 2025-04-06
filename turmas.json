@@ -1,0 +1,11 @@
+[
+  {"nome":"Arquitetura","codigo":"1"},
+  {"nome":"Banco de dados","codigo":"2"},
+  {"nome":"Estatística","codigo":"3"},
+  {"nome":"Qualidade de Software","codigo":"4"},
+  {"nome":"Processo de Software","codigo":"5"},
+  {"nome":"IHC","codigo":"6"},
+  {"nome":"Estrutura de Dados","codigo":"7"},
+  {"nome":"Gerência de Configuração","codigo":"8"},
+  {"nome":"Gerência de Projeto","codigo":"9"}
+]
