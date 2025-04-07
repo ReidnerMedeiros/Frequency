@@ -50,9 +50,9 @@ public class SistemaControle {
         return repo.carregarTurmas();
     }
 
-    // Listar presença por turma ou data
+
     public void listarPresencas(String filtro, String valor) {
-        List<Frequencia> frequencias = listarFrequencias(); // Usando o método existente
+        List<Frequencia> frequencias = listarFrequencias();
         List<Aluno> alunos = repo.carregarAlunos();
 
         Map<String, List<Frequencia>> agrupado = frequencias.stream()
@@ -74,7 +74,7 @@ public class SistemaControle {
         });
     }
 
-    // Relatório por aluno
+
     public void relatorioPorAluno(String matricula) {
         List<Aluno> alunos = repo.carregarAlunos();
         List<Turma> turmas = repo.carregarTurmas();
@@ -84,7 +84,7 @@ public class SistemaControle {
                 .findFirst()
                 .orElse("Desconhecido");
 
-        List<Frequencia> frequencias = listarFrequencias().stream() // Usando o método existente
+        List<Frequencia> frequencias = listarFrequencias().stream()
                 .filter(f -> f.getMatricula().equals(matricula))
                 .collect(Collectors.toList());
 

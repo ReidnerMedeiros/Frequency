@@ -19,14 +19,14 @@ public class Arquivo {
 
     public void salvarAluno(Aluno aluno) {
         List<Aluno> alunos = carregarAlunos();
-        alunos.removeIf(a -> a.getMatricula().equals(aluno.getMatricula())); // Evita duplicatas
+        alunos.removeIf(a -> a.getMatricula().equals(aluno.getMatricula()));
         alunos.add(aluno);
         salvarArquivo(alunoFile, alunos);
     }
 
     public void salvarTurma(Turma turma) {
         List<Turma> turmas = carregarTurmas();
-        turmas.removeIf(t -> t.getCodigo().equals(turma.getCodigo())); // Evita duplicatas por código
+        turmas.removeIf(t -> t.getCodigo().equals(turma.getCodigo()));
         turmas.add(turma);
         salvarArquivo(turmaFile, turmas);
     }
